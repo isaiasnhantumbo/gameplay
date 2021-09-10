@@ -1,0 +1,9 @@
+import {
+  REDIRECT_URI,
+  CDN_IMAGE,
+  CLIENT_ID,
+  RESPONSE_TYPE,
+  SCOPE,
+} from './discordAuth';
+
+export { REDIRECT_URI, CDN_IMAGE, CLIENT_ID, RESPONSE_TYPE, SCOPE };

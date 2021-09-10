@@ -13,6 +13,9 @@ export function Guilds({ handleGuildSelect }: GuildsProps) {
   const guilds = [
     { id: '1', name: 'Lendários', icon: 'imgae', owner: true },
     { id: '2', name: 'Legendários', icon: null, owner: false },
+    { id: '3', name: 'Legendários', icon: null, owner: false },
+    { id: '4', name: 'Legendários', icon: null, owner: false },
+    { id: '5', name: 'Legendários', icon: null, owner: false },
   ];
   return (
     <View style={styles.container}>
@@ -23,7 +26,9 @@ export function Guilds({ handleGuildSelect }: GuildsProps) {
         renderItem={({ item }) => (
           <Guild data={item} onPress={() => handleGuildSelect(item)} />
         )}
-        ItemSeparatorComponent={() => <ListDivider />}
+        contentContainerStyle={{ paddingBottom: 68, paddingTop: 103 }}
+        ListHeaderComponent={() => <ListDivider isCentered />}
+        ItemSeparatorComponent={() => <ListDivider isCentered />}
         showsVerticalScrollIndicator={false}
       />
     </View>

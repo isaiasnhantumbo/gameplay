@@ -10,7 +10,11 @@ export const styles = StyleSheet.create({
     color: theme.colors.heading,
     fontFamily: theme.fonts.text400,
     fontSize: 13,
-    textAlign: 'center',
     marginLeft: 4,
+    paddingTop: 16,
+    paddingHorizontal: 16,
+    textAlignVertical: 'top',
+    borderWidth: 1,
+    borderColor: theme.colors.secondary50,
   },
 });
