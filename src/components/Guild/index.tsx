@@ -12,21 +12,21 @@ import { GuildIcon } from '../GuildIcon';
 import { styles } from './styles';
 import { theme } from '../../global/styles/theme';
 
-export interface Guild {
+export interface GuildProps {
   id: string;
   name: string;
   icon: string | null;
   owner: boolean;
 }
 
-interface GuildProps extends TouchableOpacityProps {
-  data: Guild;
+interface Props extends TouchableOpacityProps {
+  data: GuildProps;
 }
 
-export function Guild({ data, ...rest }: GuildProps) {
+export function Guild({ data, ...rest }: Props) {
   return (
     <TouchableOpacity {...rest} style={styles.container} activeOpacity={0.7}>
-      <GuildIcon />
+      <GuildIcon guildId={data.id} iconId={data.icon} />
       <View style={styles.content}>
         <View>
           <Text style={styles.title}>{data.name}</Text>

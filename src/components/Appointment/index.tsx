@@ -6,7 +6,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { categories } from '../../utils/categories';
 
 import { GuildIcon } from '../GuildIcon';
-import { Guild } from '../Guild';
+import { GuildProps } from '../Guild';
 import CalendarSvg from '../../assets/calendar.svg';
 import PlayerSvg from '../../assets/player.svg';
 
@@ -15,7 +15,7 @@ import { theme } from '../../global/styles/theme';
 
 export type AppointmentProps = {
   id: string;
-  guild: Guild;
+  guild: GuildProps;
   category: string;
   date: string;
   description: string;
@@ -36,7 +36,7 @@ export function Appointment({ data, ...rest }: Props) {
           style={styles.guildIconContainer}
           colors={[secondary50, secondary70]}
         >
-          <GuildIcon />
+          <GuildIcon guildId={data.guild.id} iconId={data.guild.icon} />
         </LinearGradient>
         <View style={styles.content}>
           <View style={styles.header}>
